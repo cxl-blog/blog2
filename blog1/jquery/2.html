@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function (e) {
+            var p=document.createElement("p")
+            var note=document.createTextNode("<hr>niahi1ih");
+            p.appendChild(note);
+            //p.innerHTML="你还<hr>";
+            document.getElementsByTagName("div")[0].appendChild(p);
+            document.getElementById("1").innerHTML+="<p id='z'>sdhhdhd</p>";
+
+            var i=document.querySelectorAll("div p")[1];
+            i.addEventListener("click",function () {
+                alert("scc");
+
+            });
+            document.querySelectorAll("div p")[0].onclick=function () {
+                var a= console.log("sssssssss1111");
+                alert(document.querySelectorAll("#z")[0].innerText);
+                //alert(document.getElementsByClassName("ys1")[0].innerHTML);
+            };
+            //add();
+            var n=document.getElementsByClassName(".ys1")[0];
+
+            document.querySelectorAll("label")[0].onclick=function () {
+                alert(document.querySelectorAll("#text2")[0].value)
+
+            }
+
+
+        };
+        var q=document.getElementById("1");
+        //q.onclick=function () {alert("ss");}
+        function add() {
+            alert("wwwwww");
+
+        }
+        function sss() {
+            alert("ssssssssssss")
+
+        }
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div id="1" class="ys1" name="q">111111
+<p>qqq</p></div>
+<input type="button" value="ok" id="2" onclick="sss()"/>
+<label for="text1">
+<input type="text" id="text1" value="3333   <br>" /></label>
+<textarea id="text2">  222222</textarea>
+</body>
+</html>

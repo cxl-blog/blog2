@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<script type="text/javascript" src="../jquery-3.1.1.js"></script>
+<script>
+    window.onload=function(){
+        //var x=(e.pageX);
+        //var y=(e.pageY);
+        var p1=document.createElement("p");
+        var a=1;
+        //alert(typeof a);
+        //var note=document.createTextNode("nisni1inhhwhw");
+        //p1.appendChild(note);
+        document.getElementById("div2").innerHTML="nsnisi1";
+
+    }
+
+    $(document).ready(function () {
+
+        $("p#1").wrap("<h2></h2>");
+        $("p[id='2']").attr("name","doubi");
+        //var $q=$("p:eq(1)").detach();
+        //$("body").append($q);
+        //$("#1").html("<b>nihaihi1ihihiasuh</b>");
+        //alert($("#2"));
+        $("ul").click(function () {
+            var $tar=$(event.target);
+            if($tar.is("#1"))
+                    $tar.css("background-color","red");
+        })  ;
+        //$("select").val("4");
+        //alert($("option").);
+        $("select").on("change",(function () {
+            //var $tar=$(event.target);
+         var $q=$("select option").is(":selected");
+            if($q)
+                    //if($("select option").attr("selected")=="selected")
+                    alert($("select option:selected").html());
+            //if($tar.is(":selected"))
+              //      alert($tar.val());
+            }))
+       /*  $("body").append("<select id='s2'>" +
+                 "<option>q</option>" +
+                 "<option>w</option>" +
+                 "<option>e</option></select>") ;
+*/
+        $(".ys2").bind("click",function () {
+            if($(this).next().is(":visible")) {
+                $(this).next().hide();
+                $("h2").removeClass("ys3")
+            }
+            else {
+                $(this).next().show(2000);
+                //var q=$(this).next();
+                //$("#p1").show();
+                $("h2").addClass("ys3")
+            }
+        })
+        /*$("h2").hover(function () {//hover  相当于mouseover
+            $(this).next().show();
+
+        },function () {
+
+            $(this).next().hide();
+        })*/
+
+        $(".tupian").hover(function (e) {
+            mytitle=this.title;
+            var x=10;
+            var y=20;
+            this.title="";
+            if($(".tupian").is("[class]"))
+                   // $("body").append("ssssss");
+            if(mytitle)
+                    var imgtitle="<br>"+mytitle;
+            else
+                    imgtitle="";
+            $("body").append("<div  id='tool'><img src='"+this.href+"' alt='产品'/>"+imgtitle+"</div>");
+            $("#tool").css({
+
+                        "top":(e.pageY+y)+"px",
+                        "left":(e.pageX+x)+"px"
+                        //"top":$(this).position().top,
+                       //"left":$(this).position().left
+                        // "color":"blue"
+                    }
+            ).show("fast");
+
+        },function () {
+
+            this.title=mytitle;
+            $("#tool").remove();
+
+
+        })
+                .mousemove(function (e) {
+
+            var x=10;
+            var y=20;
+            $("#tool").css(
+                    {
+                        "top":(e.pageY+y)+"px",
+                        "left":(e.pageX+x)+"px"
+                    }
+            )
+
+        });
+        //$("#div2").mousemove
+    })
+
+    </script>
+<style type="text/css">
+    .ys4{
+     display: none;
+
+    }
+    .ys3{
+        background-color: #FF0000;
+    }
+    #tool{
+        background-color: #FF0000;
+    color: aliceblue;
+    position :absolute;
+    }
+    li{
+
+    }
+</style>
+</head>
+<body>
+<ul>
+<li id="1" class="ys1">nihao1......zaa</li>
+<li id="2">chishi1</li>
+    </ul>
+<br>
+<select id="s1" multiple="multiple" >
+    <option  selected="selected">1</option>
+    <option>2</option>
+    <option>3</option>
+    <option >4</option>
+</select>
+<h2 align="center" class="ys2">查看内容</h2>
+<div style="text-align: right" id="div1" class="ys4">
+    zhuyaoneishii1hugdjjahsbhdgygsjd<br>
+    <span>1</span>
+    <span>2</span>
+    <p align="left" id="p1">你还在吗</p>
+</div>
+<div id="div2"></div>
+<ul>
+    <li><a href="../i/wallhaven-13960.jpg" class="tupian" id="q2" title="风景"><img src="../i/wallhaven-13960.jpg" height="200" width="200" /></a></li>
+</ul>
+</body>
+</html>
